@@ -1,0 +1,47 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.md { 
+        flex-direction: row;
+    }
+
+    &__link {
+        margin-bottom: 1.25rem;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include m.md { 
+            margin-bottom: 0;
+            margin-right: 1.25rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        &--create {
+            font-weight: 700;
+            color: v.$primary;
+
+            @include m.md { 
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    height: 40px;
+                    border-right: 2px solid v.$lightGray;
+                    margin: 0 0 0 1.25rem;
+                }
+            }
+        }
+    }
+}

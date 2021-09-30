@@ -1,0 +1,59 @@
+@use "variables" as v;
+
+@mixin sm {
+    @media (min-width: v.$sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: v.$md) {
+        @content;
+    }
+} 
+
+@mixin lg {
+    @media (min-width: v.$lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: v.$xl) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: v.$xxl) {
+        @content;
+    }
+}
+
+@mixin btn($bgColor, $textColor) {
+    background-color: $bgColor;
+    padding: .75rem 2rem;
+    color: $textColor;
+    font-size: 1.25rem;
+    font-weight: 400;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .3s;
+    
+
+    @include md {
+        width: auto;
+    }
+    &:hover {
+        background-color: darken( $bgColor, 10% );
+    }
+}
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns,1fr);
+    gap: $gap;
+}
+
