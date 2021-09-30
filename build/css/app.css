@@ -540,7 +540,7 @@ p {
   margin-bottom: 2rem;
 }
 .hero__link {
-  background-color: #ff8015;
+  background-color: #d16812;
   padding: 0.75rem 2rem;
   color: #FFFFFF;
   font-size: 1.25rem;
@@ -557,7 +557,7 @@ p {
   }
 }
 .hero__link:hover {
-  background-color: #e16700;
+  background-color: #a2510e;
 }
 
 .text-center {
