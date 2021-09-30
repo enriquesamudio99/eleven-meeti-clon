@@ -14,6 +14,7 @@
 
     &__logo {
         margin-bottom: v.$gutter;
+        width: 120px;
 
         @include m.md { 
             margin-bottom: 0;
