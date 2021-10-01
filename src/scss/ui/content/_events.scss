@@ -1,0 +1,70 @@
+@use "base/variables" as v;
+@use "base/mixins" as m; 
+
+.events {
+
+    &__heading {
+        margin-bottom: v.$gutter;
+        text-align: center;
+        color: v.$gray;
+    }
+
+    &__grid {
+        @include m.grid(1,1.5rem);
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include m.lg { 
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    
+}
+
+.event {
+    border: 1px solid v.$lightGray;
+
+    &__content {
+        padding: 1.5rem;
+    }
+
+    &__date { 
+        font-size: 0.938rem;
+    }
+
+    &__name {
+        color: v.$gray;
+        font-family: v.$mainFont;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+
+        @include m.xl { 
+            font-size: 1.5rem;
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+    }
+
+    &__author-img {
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1.5rem;
+    }
+
+    &__organizer-text {
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    &__organizer-name {
+        margin: 0;
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+}
