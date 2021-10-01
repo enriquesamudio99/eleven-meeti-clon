@@ -713,6 +713,45 @@ p {
   }
 }
 
+.groups {
+  background-image: linear-gradient(to bottom, #B8336A 0%, #B8336A 50%, #068D9D 50%, #068D9D 100%);
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .groups {
+    background-image: linear-gradient(to right, #B8336A 0%, #B8336A 50%, #068D9D 50%, #068D9D 100%);
+  }
+}
+.groups__grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .groups__grid {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+.group__heading {
+  font-family: "Raleway", sans-serif;
+}
+.group__text {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.footer {
+  padding-top: 3.5rem;
+}
+.footer__copyright {
+  margin: 3.5rem 0 0;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
 .text-center {
   text-align: center;
 }

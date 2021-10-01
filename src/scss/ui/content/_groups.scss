@@ -1,0 +1,35 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.groups {
+    background-image: linear-gradient(to bottom, v.$primary 0%, v.$primary 50%, v.$secondary 50%, v.$secondary 100%);
+    color: v.$white;
+
+    @include m.md { 
+        background-image: linear-gradient(to right, v.$primary 0%, v.$primary 50%, v.$secondary 50%, v.$secondary 100%);
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        gap: 2.5rem;
+
+        @include m.md { 
+            grid-template-rows: unset;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+        }
+    }
+} 
+
+.group {
+    
+    &__heading {
+        font-family: v.$mainFont;
+    }
+
+    &__text {
+        margin: 0; 
+        font-size: 1.125rem;  
+    }
+}

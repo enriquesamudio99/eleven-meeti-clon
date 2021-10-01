@@ -1,0 +1,11 @@
+@use "base/variables" as v;
+
+.footer {
+    padding-top: v.$gutter;
+
+    &__copyright {
+        margin: v.$gutter 0 0;
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+}
