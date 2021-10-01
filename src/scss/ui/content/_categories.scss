@@ -1,0 +1,38 @@
+@use "base/variables" as v;
+@use "base/mixins" as m; 
+
+.categories {
+
+    &__heading {
+        text-align: center;
+        color: v.$gray;
+        margin-bottom: v.$gutter;
+    }
+
+    &__grid {
+        @include m.grid(1,1.5rem);
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include m.md { 
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+}
+
+.categorie {
+
+    &__name {
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+
+        @include m.md { 
+            font-size: 1.5rem;
+        }
+    }
+}

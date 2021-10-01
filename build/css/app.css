@@ -680,6 +680,39 @@ p {
   font-size: 1.125rem;
 }
 
+.categories__heading {
+  text-align: center;
+  color: #484349;
+  margin-bottom: 3.5rem;
+}
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 576px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .categories__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.categorie__name {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .categorie__name {
+    font-size: 1.5rem;
+  }
+}
+
 .text-center {
   text-align: center;
 }
