@@ -714,12 +714,12 @@ p {
 }
 
 .groups {
-  background-image: linear-gradient(to bottom, #B8336A 0%, #B8336A 50%, #068D9D 50%, #068D9D 100%);
+  background-image: linear-gradient(to bottom, #B8336A 0%, #B8336A 50%, #0a7a86 50%, #0a7a86 100%);
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .groups {
-    background-image: linear-gradient(to right, #B8336A 0%, #B8336A 50%, #068D9D 50%, #068D9D 100%);
+    background-image: linear-gradient(to right, #B8336A 0%, #B8336A 50%, #0a7a86 50%, #0a7a86 100%);
   }
 }
 .groups__grid {
@@ -741,6 +741,42 @@ p {
 .group__text {
   margin: 0;
   font-size: 1.125rem;
+}
+
+.meeti__heading {
+  color: #484349;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+.meeti__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 992px) {
+  .meeti__grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.meeti__img {
+  margin-bottom: 2rem;
+}
+
+.sidebar__map {
+  width: 100%;
+}
+.sidebar__content {
+  background-color: #0a7a86;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 2rem;
+}
+.sidebar__text {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.sidebar__label {
+  font-weight: 700;
 }
 
 .footer {

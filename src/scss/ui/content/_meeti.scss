@@ -1,0 +1,50 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.meeti {
+
+    &__heading {
+        color: v.$gray;
+        margin-bottom: v.$gutter;
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        @include m.lg { 
+            grid-template-columns: 2fr 1fr;
+        } 
+    }
+
+    &__img {
+        margin-bottom: 2rem;
+    }
+
+}
+
+.sidebar {
+
+    &__map {
+        width: 100%;
+    }
+
+    &__content {
+        background-color: v.$secondary;
+        color: v.$white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+
+    &__label {
+        font-weight: 700;
+    }
+
+}
