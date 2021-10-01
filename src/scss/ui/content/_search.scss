@@ -1,0 +1,41 @@
+@use "base/variables" as v;
+@use "base/mixins" as m; 
+
+.search {
+    background-color: v.$lightGray;
+
+    &__heading {
+        text-align: center;
+        color: v.$gray;
+        margin-bottom: v.$gutter;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+
+    @include m.lg { 
+        @include m.grid(4,2rem);
+        max-width: initial;
+        margin: 0;
+    }
+
+    &__field {
+        padding: .75rem;
+        margin-bottom: 2rem;
+        border: 1px solid lighten($color: v.$gray, $amount: 50);
+        outline: none;
+
+        @include m.lg { 
+            margin-bottom: 0;
+        }
+    }
+
+    &__submit {
+        @include m.btn(v.$primary, v.$white);
+        cursor: pointer;
+    }
+}

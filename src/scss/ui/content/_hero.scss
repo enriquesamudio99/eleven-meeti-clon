@@ -14,8 +14,8 @@
     text-align: center;
 
     &__heading {
-        width: 90%;
-        max-width: 650px;
+        width: calc(100% - 2rem);
+        max-width: 600px;
         margin-bottom: 2rem;
     }
 

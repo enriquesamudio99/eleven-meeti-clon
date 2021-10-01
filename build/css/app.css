@@ -415,6 +415,7 @@ h1, h2, h3 {
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 1rem;
+  font-family: "Staatliches", sans-serif;
 }
 
 h1 {
@@ -536,8 +537,8 @@ p {
   text-align: center;
 }
 .hero__heading {
-  width: 90%;
-  max-width: 650px;
+  width: calc(100% - 2rem);
+  max-width: 600px;
   margin-bottom: 2rem;
 }
 .hero__link {
@@ -559,6 +560,63 @@ p {
 }
 .hero__link:hover {
   background-color: #cc5200;
+}
+
+.search {
+  background-color: #F2F2F2;
+}
+.search__heading {
+  text-align: center;
+  color: #484349;
+  margin-bottom: 3.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: initial;
+    margin: 0;
+  }
+}
+.form__field {
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  border: 1px solid #c7c3c8;
+  outline: none;
+}
+@media (min-width: 992px) {
+  .form__field {
+    margin-bottom: 0;
+  }
+}
+.form__submit {
+  background-color: #B8336A;
+  padding: 0.75rem 2rem;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .form__submit {
+    width: auto;
+  }
+}
+.form__submit:hover {
+  background-color: #902853;
 }
 
 .text-center {
